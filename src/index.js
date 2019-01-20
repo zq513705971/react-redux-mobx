@@ -20,6 +20,7 @@ const Main = () => (
             <Route exact path='/' component={Home} />
             <Route path='/mobx' component={mobx} />
             <Route path='/redux' component={redux} />
+            <Redirect to="/" />
         </Switch>
     </main>
 )
@@ -46,7 +47,7 @@ const App = () => (
 )
 
 ReactDOM.render(
-    <BrowserRouter>
+    <BrowserRouter basename="/react-redux-mobx">
         <App />
     </BrowserRouter>
     , document.getElementById('app'));
