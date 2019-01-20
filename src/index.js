@@ -4,7 +4,7 @@ import * as css from './css/index.scss';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Link, Switch, Redirect } from 'react-router-dom';
 import mobx from './mobx/mobx';
 import redux from './redux/redux';
 
