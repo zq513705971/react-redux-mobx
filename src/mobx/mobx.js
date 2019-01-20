@@ -1,5 +1,4 @@
 import React from 'react';
-import { observer, inject } from "mobx-react";
 import { Provider } from "mobx-react";
 import store from "./store";
 

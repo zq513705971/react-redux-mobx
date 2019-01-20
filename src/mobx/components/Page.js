@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { observer, inject } from "mobx-react";
 
-@inject(["store"]) // 注入对应的store
+@inject(["store"])
 @observer
 export default class Page extends Component {
     constructor(props) {
