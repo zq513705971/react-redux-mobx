@@ -37,7 +37,7 @@ function mapDispatchToProps(dispatch, ownProps) {
 /**
  * 使用bindActionCreator，可以直接将action包装成可以被调用的函数。 
  * */
-// const mapDispatchToProps = {} = (dispatch, ownProps) => {
+// const mapDispatchToProps = (dispatch, ownProps) => {
 //     return bindActionCreators({
 //         add,
 //         toggle
