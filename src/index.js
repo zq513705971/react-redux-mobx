@@ -47,7 +47,7 @@ const App = () => (
 )
 
 ReactDOM.render(
-    <BrowserRouter basename="/react-redux-mobx">
+    <BrowserRouter basename="/">
         <App />
     </BrowserRouter>
     , document.getElementById('app'));

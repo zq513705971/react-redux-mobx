@@ -2,6 +2,24 @@ import React, { Component } from 'react';
 import { add, toggle } from '../action';
 import { connect } from 'react-redux';
 
+function mapStateToProps(state, ownProps) {
+    return {
+        store: state.reducer
+    }
+}
+
+function mapDispatchToProps(dispatch, ownProps) {
+    return {
+        add: (item) => {
+            dispatch(add(item))
+        },
+        toggle: (item) => {
+            dispatch(toggle(item))
+        }
+    }
+}
+
+@connect(mapStateToProps, mapDispatchToProps)
 class Page extends Component {
     constructor(props) {
         super(props);
@@ -47,21 +65,6 @@ class Page extends Component {
     }
 }
 
-function mapStateToProps(state, ownProps) {
-    return {
-        store: state.reducer
-    }
-}
 
-function mapDispatchToProps(dispatch, ownProps) {
-    return {
-        add: (item) => {
-            dispatch(add(item))
-        },
-        toggle: (item) => {
-            dispatch(toggle(item))
-        }
-    }
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Page);
+export default Page;
