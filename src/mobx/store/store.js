@@ -13,6 +13,11 @@ class Store {
         }
         this.list = _list;
     }
+
+    @action
+    Add = (item) => {
+        this.list.push(item);
+    }
 }
 
 let store = new Store();

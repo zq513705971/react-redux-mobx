@@ -3,6 +3,7 @@ import { Provider } from "mobx-react";
 import store from "./store";
 
 import Page from './components/Page';
+import ShowCount from './components/ShowCount';
 
 class App extends React.Component {
     constructor(props) {
@@ -12,7 +13,10 @@ class App extends React.Component {
     render() {
         return (
             <Provider store={store}>
-                <Page name={"mobx"} />
+                 <div>
+                    <Page name={"mobx"} />
+                    <ShowCount />
+                </div>
             </Provider>
         );
     }

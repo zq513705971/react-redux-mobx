@@ -4,6 +4,8 @@ import configureStore from './store';
 
 import Page from './components/Page';
 
+import ShowCount from './components/ShowCount';
+
 let store = configureStore();
 
 //对store.dispatch进行改造
@@ -22,7 +24,10 @@ class App extends React.Component {
     render() {
         return (
             <Provider store={store}>
-                <Page name={"redux"} />
+                <div>
+                    <Page name={"redux"} />
+                    <ShowCount />
+                </div>
             </Provider>
         );
     }
